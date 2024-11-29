@@ -1,0 +1,103 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  margin-top: 40px;
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .card {
+      width: 30%;
+      border: 1px solid gray;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 5px 10px 6px;
+      position: relative;
+  img{
+          width: 100%;
+        }
+      &:hover {
+        transform: scale(1.02);
+        transition: 0.3s;
+      
+      }
+
+      &:hover button {
+        width: 180px; /* Yavaş-yavaş genişlənir */
+    opacity: 1;   /* Tədricən görünür */
+    visibility: visible; /* Tam görünən olur */
+    transition: width 0.3s ease, opacity 0.3s ease; /* Keçid animasiyası */
+        // width: 180px;
+        // transition: 0.3s;
+        // opacity: 1;
+        // display: block;
+      }
+
+      button {
+        border: 0cap;
+        width: 0px; /* Başlanğıcda genişlik 0-dır */
+        height: 40px;
+        color: white;
+        font-size: 18px;
+        background-color: purple;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        position: absolute;
+        left: 0%;
+        opacity: 0; /* Tamamilə görünməz */
+        visibility: hidden; /* Gizlidir, lakin DOM-dadır */
+        transition: width 0.3s ease, opacity 0.3s ease; /* Keçid animasiyası */
+      }
+
+      span {
+        display: flex; /* Flexbox mərkəzləşməsi üçün */
+        justify-content: center;
+        align-items: center;
+        background-color: purple;
+        color: white;
+        width: 0px; /* Başlanğıcda eni 0 */
+        height: 40px;
+        position: absolute;
+        right: 0%; /* Sətrin sağ tərəfində yerləşir */
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        opacity: 0; /* Görünməz */
+        visibility: hidden; /* Gizlidir, lakin DOM-dadır */
+        transition: width 0.3s ease, opacity 0.3s ease, visibility 0.3s ease; /* Keçidlər */
+    }
+    
+    &:hover span {
+        opacity: 1; /* Görünən olur */
+        visibility: visible; /* Tam görünən vəziyyət */
+        width: 80px; /* Eni artır */
+        transition: width 0.3s ease, opacity 0.3s ease; /* Keçid animasiyası */
+    }
+    
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}
